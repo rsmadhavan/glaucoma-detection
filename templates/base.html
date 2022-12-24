@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CAPSTONE</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">      
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">GLAUCOMA DETECTION</a>
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" data-toggle="modal" data-target="#exampleModal" >Help</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog  modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">About Project</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Glaucoma is a chronic, progressive eye disease that damages the optic nerve and can lead to vision loss. Early detection and treatment of glaucoma can slow or prevent further vision loss, making it important to identify the disease as early as possible. One approach to detecting glaucoma is the use of deep learning algorithms.</p>
+                      <p>Deep learning is a type of machine learning that involves training artificial neural networks on a large dataset. These networks are able to learn complex patterns and relationships in data, making them well-suited for tasks such as image classification and object detection. In the context of glaucoma detection, deep learning algorithms can be trained to analyze images of the eye and identify signs of the disease.</p>
+                      <p>There are several approaches to using deep learning for glaucoma detection. One approach is to use convolutional neural networks (CNNs) to analyze images of the eye and classify them as either normal or showing signs of glaucoma. These networks can be trained on a dataset of eye images, with labels indicating whether each image shows signs of glaucoma or not.</p>
+                      <p>Once trained, the CNN can then be used to classify new images of the eye, providing a diagnosis of whether or not the eye shows signs of glaucoma.</p>
+                      <p>Another approach is to use deep learning to analyze the results of visual field tests, which are used to assess the extent of vision loss in glaucoma patients. Visual field tests produce maps of the visual field, with areas of reduced sensitivity indicating vision loss. Deep learning algorithms can be trained to analyze these maps and identify patterns that are indicative of glaucoma.</p>
+                      <p>There are also approaches that use a combination of deep learning and other methods to detect glaucoma.</p><p> For example, some studies have used deep learning in combination with analysis of the thickness of the retinal nerve fiber layer, which is often reduced in glaucoma patients.</p>
+                      <p>Overall, deep learning has the potential to be a powerful tool for the early detection of glaucoma. By accurately identifying the disease at an early stage, it can help to slow or prevent further vision loss and improve the quality of life for those affected by the disease. Further research is needed to fully realize the potential of deep learning for glaucoma detection, but the initial results are promising.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </nav>
+    <div class="container" class="d-flex flex-column align-items-center">
+        <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
+    </div>
+</body>
+
+<footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>    
+</footer>
+
+</html>

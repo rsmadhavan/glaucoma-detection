@@ -1,0 +1,6 @@
+Flask==2.2.2
+gevent==22.10.2
+keras==2.11.0
+numpy==1.23.1
+opencv_python==4.6.0.66
+Werkzeug==2.2.2
